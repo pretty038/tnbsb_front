@@ -1,0 +1,54 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+/* 未选中的样式 */
+radio .wx-radio-input {
+    width: 35rpx;
+    height: 35rpx;
+    border-radius: 50%;     /* 圆角 */
+}
+/* 选中后 背景及勾 的样式 */
+radio .wx-radio-input.wx-radio-input-checked::before {
+    width: 35rpx;
+    height: 35rpx;
+    border-radius: 50%; 
+    line-height: 35rpx;
+    text-align: center;
+    font-size: 30rpx;       /* 勾大小 */
+    color: #fff;            /* 白色勾  */
+    transform: translate(-50%, -50%) scale(1);
+}
+.tip{
+  margin: 35rpx;
+}
+.btn-area{
+  margin: 20rpx;
+}
+button{
+  margin: 10rpx 0;
+  background: rgba(90, 137, 199, 0.973);
+  color: white;
+}
+.textfield{
+  outline-style: none ;
+  border: 1px solid #ccc; 
+  border-radius: 3px;
+  font-size: 24px;
+}
+.questionTitle{
+  color:rgba(90, 137, 199, 0.973);
+}
+.loading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner{
+  vertical-align:top;  /*靠上对齐*/
+}
+

@@ -1,0 +1,88 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: rgba(235, 239, 243, 0.973);
+}
+
+.enter {
+  margin-top: 0px;
+}
+
+/* button{
+  margin: 10rpx 0;
+  background: rgba(90, 137, 199, 0.973);
+  color: #fff
+} */
+
+button{
+  /* background-color:rgba(156, 183, 218, 0.973); */
+  background:linear-gradient(to bottom, #f0f1f3,#acaeaf);/*设置按钮为渐变颜色*/
+  color: #525355;
+  font-size: 14px;
+  width: 100%;
+  /* height: 40px;  */
+  /* margin-left: 18px; */
+  border-radius: 4px;
+  border: 1px solid #a5a1a1;
+}
+
+
+#content{
+  background-color: rgba(255, 255, 255, 0.95);
+  /* border: 1px solid #000000; */
+  /* border-radius: 6px; */
+  padding: 10px;
+  margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.login-input-box{
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+.login-input-box input{
+  /* width: 340px; */
+  height: 32px;
+  border: 1px solid #a5a1a1;
+  border-radius: 4px;
+  padding-left: 80px;
+}
+
+.login-input-box input:hover{
+  border: 1px solid #ff7d0a;
+}
+
+.login-input-box .icon.icon-user{
+  background:url("../../img/phone.png");
+}
+
+page{
+  height: 100%;
+}
+.background {
+width: 100%;
+height: 100%;
+position:fixed; 
+background-size:100% 100%;
+z-index: -1;
+}

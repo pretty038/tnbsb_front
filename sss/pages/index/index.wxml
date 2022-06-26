@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<image class='background' src="../../img/index.png" mode="heighFix"></image>
+<view class="container">
+  <div id="content">
+    <view class="userinfo">
+      <block>
+        <!-- <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+        <open-data class="userinfo-nickname" type="userNickName"></open-data> -->
+      </block>
+    </view>
+    <view class="login-input-box">
+            <!-- <span class="icon icon-user"></span> -->
+            <input type="text" placeholder="请输入手机号" bindinput="inputPhone"></input>
+    </view>
+    <view class="enter">
+      <button bindtap="bindViewTap" style="border-radius:30px">开始测试</button>
+    </view>
+   </div>
+   <div style="position:absolute;bottom:20px;color:#939393;font-size:10px;">
+     <p>津公网安备 12011302120259号</p >
+   </div>
+</view>
+
+  
+
+

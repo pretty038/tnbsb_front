@@ -1,0 +1,39 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+<image class="banner" src="../../img/banner2.png" mode="widthFix"></image>
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view wx:if="{{questionlist.length==0}}" class="loading"><text>正在努力加载中....</text></view>
+<block class="center" wx:for="{{questionlist}}" wx:key="key" wx:for-item="item">
+      <view class="tip">
+        <!-- <text class="questionTitle">{{index+1}}.{{item.question}}\n</text> -->
+        {{index+1}}.<rich-text class="questionTitle" nodes="{{item.question}}"></rich-text>
+        <radio-group class="radio-group" bindchange="bindInput" data-id="{{item.id}}" wx:for-item="item" wx:if="{{item.question_type==0}}" name="{{item.qname}}" data-name="{{item.qname}}">
+          <label class="radio">
+            <radio value="{{item.option_items[0].item_score}}" /><text>A.{{item.option_items[0].item_content}}\n</text>
+          </label>
+          <label class="radio">
+            <radio value="{{item.option_items[1].item_score}}" /><text>B.{{item.option_items[1].item_content}}\n</text>
+          </label>
+          <label class="radio" wx:if="{{item.option_items[2]}}">
+            <radio value="{{item.option_items[2].item_score}}" /><text>C.{{item.option_items[2].item_content}}\n</text>
+          </label>
+          <label class="radio" wx:if="{{item.option_items[3]}}">
+            <radio value="{{item.option_items[3].item_score}}" /><text>D.{{item.option_items[3].item_content}}\n</text>
+          </label>
+        </radio-group>
+        
+        <view wx:if="{{item.question_type==1}}">
+        <text wx:if="{{item.option_items[0]}}">{{item.option_items[0].item_content}}</text>
+        <input class="textfield" type="digit" confirm-type="done" name="{{item.qname}}" wx:if="{{item.option_items[0]}}" bindinput="bindInput" data-name="{{item.qname}}"></input>
+        </view>
+      </view>
+</block>
+<view class="btn-area" wx:if="{{questionlist.length!=0}}">
+  <button form-type="submit">提交</button>
+  <!-- <button form-type="reset">重置</button> -->
+</view>
+</form>

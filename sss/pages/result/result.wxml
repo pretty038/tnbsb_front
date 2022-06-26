@@ -1,0 +1,32 @@
+<image class='background' src="../../img/result.png" mode="heighFix"></image>
+<view class="container">
+  <!-- <view class="canvasBox"> -->
+      <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
+      <!-- <view class='bigCircle'></view>
+      <view class='littleCircle'></view> -->
+      <canvas canvas-id="runCanvas" id="runCanvas" class='canvas'></canvas>
+  <!-- </view> -->
+  <view wx:if="{{score>=16}}" class="scorebad">
+    <text>风险指数:{{score}}(偏高)</text>
+  </view>
+  <view wx:if="{{score<16}}" class="scoregood">
+    <text>风险指数:{{score}}(正常)</text>
+  </view>
+  <view class="tips">
+    <text wx:if="{{uacr>=30}}">
+    您已经有早期肾病了，请尽快就医。
+    </text>
+    <text wx:if="{{score>=16 & uacr<30}}">
+    您的糖尿病肾病(DKD)风险比较高,建议:
+      ①合理饮食及适量运动，减轻体重；
+      ②在医生的指导下，针对地性控制危险因素，进一步优化血糖、血压及血脂治疗；
+      ③定期随访，了解评分变化以针对性地调整治疗。
+    </text>
+    <text wx:if="{{score<16}}">
+    恭喜您属于糖尿病肾病(DKD)低危人群,建议:
+      继续保持合理的饮食、运动，维持良好的血糖、血压及血脂控制，定期复查以针对性调整治疗。
+    </text>
+  </view>
+</view>
+
+
